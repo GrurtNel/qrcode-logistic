@@ -1,23 +1,23 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Trang chủ
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="onLogout()">
+        <ion-icon name="logout"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-label fixed>Tên đăng nhập</ion-label>
-      <ion-input type="text" value=""></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label fixed>Mật khẩu</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-  </ion-list>
-  <div padding>
-    <button ion-button color="primary" block>Sign In</button>
+
+  <div padding text-center>
+    <img src="/assets/imgs/welcome.png" alt="" width="50%" height="auto" />
+    <h2>Mr / Mrs. {{employeeName}}</h2>
+    <!-- <ion-label floating>Tên đăng nhập</ion-label>
+    <ion-input type="text" required #order_id></ion-input> -->
+    <button ion-button color="primary" block (click)="onScanProduct()">Xin mời quét sản phẩm</button>
   </div>
 </ion-content>

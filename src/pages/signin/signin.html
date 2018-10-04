@@ -12,17 +12,23 @@
 
 
 <ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-label floating>Tên đăng nhập</ion-label>
-      <ion-input type="text" value=""></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Mật khẩu</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-  </ion-list>
   <div padding>
-    <button ion-button color="primary" block>Đăng nhập</button>
+    <img src="/assets/imgs/logo.png" alt="" />
   </div>
+  <form #f="ngForm">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Tên đăng nhập</ion-label>
+        <ion-input type="text" required name="uname" [(ngModel)]="authentication.uname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Mật khẩu</ion-label>
+        <ion-input type="password" required name="uname" [(ngModel)]="authentication.password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div padding>
+      <button ion-button color="primary" block (click)="onLogin()" [disabled]="!f.valid">Đăng nhập</button>
+    </div>
+  </form>
+
 </ion-content>
