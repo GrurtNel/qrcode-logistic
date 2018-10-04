@@ -1,0 +1,7 @@
+{
+  "name": "qrcode-logistic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
