@@ -47,6 +47,8 @@ export class OrderInfoPage implements OnInit {
       }
       this.http.Get(apiURL.getOrderInfo, { order_id: this.orderID }).subscribe(orderInfo => {
         this.orderInfo = orderInfo
+      },err=>{
+        this.navCtrl.pop()
       })
     })
   }

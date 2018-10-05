@@ -1,5 +1,5 @@
 
-const baseURL = 'http://192.168.1.190:8081/api/'
+const baseURL = 'http://192.168.11.135:8081/api/'
 function getUrl(endPoint: string) {
     return baseURL + endPoint;
 }

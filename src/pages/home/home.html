@@ -5,19 +5,24 @@
     </ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="onLogout()">
-        <ion-icon name="logout"></ion-icon>
+        <ion-icon name="log-out" color="danger"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
-  <div padding text-center>
-    <img src="/assets/imgs/welcome.png" alt="" width="50%" height="auto" />
-    <h2>Mr / Mrs. {{employeeName}}</h2>
-    <!-- <ion-label floating>Tên đăng nhập</ion-label>
-    <ion-input type="text" required #order_id></ion-input> -->
-    <button ion-button color="primary" block (click)="onScanProduct()">Xin mời quét sản phẩm</button>
-  </div>
+<ion-content padding align-items-center>
+  <ion-grid style="height:100%">
+    <ion-row style="height:100%" align-items-center>
+        <div padding text-center>
+            <img src="/assets/imgs/logo.png" alt=""  height="auto" />
+            <h3 style="color: #ff4c4c">Xin chào</h3> 
+            <h1><span style="color: #ff4c4c">Mr / Mrs.</span> <span style="color: #34bf49">{{employeeName}}</span></h1> 
+            <!-- <ion-label floating>Tên đăng nhập</ion-label>
+            <ion-input type="text" required #order_id></ion-input> -->
+            <button ion-button color="primary" block (click)="onScanProduct()" style="margin-top: 2rem">Xin mời quét sản phẩm</button>
+            <!-- <button ion-button color="primary" block (click)="onDemo()" style="margin-top: 2rem">Xin mời quét sản phẩm</button> -->
+          </div>
+    </ion-row>
+  </ion-grid>
 </ion-content>

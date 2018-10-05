@@ -3,6 +3,7 @@ import { NavController, AlertController } from 'ionic-angular';
 import { AuthService } from '../../app/x/http/auth.service';
 import { OrderInfoPage } from '../order-info/order-info';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { SigninPage } from '../signin/signin';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
@@ -34,4 +35,12 @@ export class HomePage implements OnInit {
     });
   }
 
+  onLogout() {
+    localStorage.clear()
+    this.navCtrl.setRoot(SigninPage)
+  }
+
+  onDemo() {
+    this.navCtrl.push(OrderInfoPage, { hash:'prd_Co6wluU4GyiFgasstoad$$P_aKk8iWje3k2' })
+  }
 }
