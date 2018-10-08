@@ -1,5 +1,5 @@
 
-const baseURL = 'http://192.168.11.135:8081/api/'
+const baseURL = 'http://qrcode-log.herokuapp.com/api/'
 function getUrl(endPoint: string) {
     return baseURL + endPoint;
 }
@@ -12,6 +12,4 @@ export const apiURL = {
     createOrderHistory: getUrl('employee/order/history/create'),
     // login: 'http://localhost:8081/api/employee/login',
     //employee
-
-
 }
